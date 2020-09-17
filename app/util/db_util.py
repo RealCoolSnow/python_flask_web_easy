@@ -1,3 +1,10 @@
+'''
+Description: 
+Author: CoolSnow (coolsnow2020@gmail.com)
+Date: 2020-09-17 10:49:40
+LastEditors: CoolSnow
+LastEditTime: 2020-09-17 16:17:44
+'''
 # -*- coding: utf-8 -*-
 import logging
 
@@ -15,7 +22,7 @@ class DBUtil(object):
     def __init__(self, db_conf=None, encoding='utf-8', echo=False):
         if db_conf is None:
             #db_conf = current_app.config['SQLALCHEMY_DATABASE_URI']
-            db_conf = 'mysql+pymysql://root:xiaofengMUmu@0927@127.0.0.1:3306/snow?charset=utf8'
+            db_conf = 'mysql+pymysql://root:123456@127.0.0.1:3306/snow?charset=utf8'
         self._engine = create_engine(db_conf, encoding=encoding, echo=echo)
         session_class = sessionmaker(self._engine)
         self._session = session_class()
